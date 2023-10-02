@@ -1,0 +1,7 @@
+res://business_goblin.tscn
+res://block_tile_map.tscn
+res://Scenes/block_tile_map.tscn
+res://Scenes/business_goblin.tscn
+res://Scenes/world.tscn
+res://Scripts/Player.gd
+res://player.tscn

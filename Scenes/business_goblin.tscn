@@ -105,3 +105,4 @@ vision_cast = NodePath("../../RayCast2D")
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(0, -4)
 target_position = Vector2(0, 16)
+collision_mask = 3

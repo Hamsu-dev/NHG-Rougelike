@@ -1,8 +1,7 @@
-res://player.tscn
-res://Scenes/business_goblin.tscn
-res://Scripts/enemy_chase_state.gd
-res://Scenes/world.tscn
+res://business_goblin.tscn
+res://block_tile_map.tscn
 res://Scenes/block_tile_map.tscn
-res://Scripts/business_goblin.gd
+res://Scenes/business_goblin.tscn
+res://Scenes/world.tscn
 res://Scripts/Player.gd
-res://Scripts/enemy_wander_state.gd
+res://player.tscn

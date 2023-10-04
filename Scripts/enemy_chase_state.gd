@@ -18,11 +18,13 @@ func _exit_state() -> void:
 	set_physics_process(false)
 
 func _physics_process(delta) -> void:
-	animator.scale.x = -sign(actor.velocity.x)
-	if animator.scale.x == 0.0: animator.scale.x = 1.0
 	var direction_to_player = (actor.player.global_position - actor.global_position).normalized()
 	actor.velocity = actor.velocity.move_toward(direction_to_player * actor.max_speed, actor.acceleration * delta)
 	actor.move_and_slide()
+	
+	actor.animation_director.direction = Vector2.LEFT if direction_to_player.x < 0 else Vector2.RIGHT
+	actor.animation_director.play("walk")
+	
 	if not vision_cast.is_colliding() or (vision_cast.is_colliding() and not vision_cast.get_collider().is_in_group("Player")):
 		lost_player.emit()
 

@@ -918,3 +918,5 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/Idle/blend_position = Vector2(-0.000650644, 0.194286)
 parameters/Run/blend_position = Vector2(-0.00195187, 0.177143)
+
+[node name="Camera2D" type="Camera2D" parent="."]

@@ -1,7 +1,7 @@
 class_name Player
 extends CharacterBody2D
 
-@onready var sprite_2d = $Sprite2D
+@onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var animation_player = $AnimationPlayer
 @onready var animation_tree = $AnimationTree
 

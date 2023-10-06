@@ -894,6 +894,8 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(0, -5)
+collision_layer = 2
+collision_mask = 13
 script = ExtResource("1_iqtuf")
 Speed = 80
 Acceleration = 50

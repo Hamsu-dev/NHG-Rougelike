@@ -1,6 +1,6 @@
 [gd_scene load_steps=58 format=3 uid="uid://0swq8evanvan"]
 
-[ext_resource type="Script" path="res://Scripts/business_goblin.gd" id="1_ciccd"]
+[ext_resource type="Script" path="res://Scripts/shulker_robot.gd" id="1_du7ff"]
 [ext_resource type="Texture2D" uid="uid://2uwxiw31gd5" path="res://Assets/Pot_enemy.png" id="2_cknee"]
 [ext_resource type="Script" path="res://States/finite_state_machine.gd" id="4_alqsg"]
 [ext_resource type="Script" path="res://Scripts/animation_director.gd" id="4_q5sk8"]
@@ -333,6 +333,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3.63, 2.08165e-12)]
+}
 
 [sub_resource type="Animation" id="Animation_1gjpj"]
 resource_name = "idle"
@@ -352,22 +364,10 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimatedSprite2D:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -377,7 +377,6 @@ tracks/2/keys = {
 [sub_resource type="Animation" id="Animation_gecj7"]
 resource_name = "shoot_left"
 length = 0.8
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -418,7 +417,6 @@ tracks/2/keys = {
 [sub_resource type="Animation" id="Animation_nmlxg"]
 resource_name = "shoot_right"
 length = 0.8
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -494,6 +492,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [1, 2, 3, 4, 5, 6]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-3.63, 2.08165e-12), Vector2(-3.63, 2.08165e-12)]
+}
 
 [sub_resource type="Animation" id="Animation_73ncd"]
 resource_name = "wake_right"
@@ -533,6 +543,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [false, false, false, false, false, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3.5, 2.08165e-12), Vector2(3.5, 2.08165e-12)]
 }
 
 [sub_resource type="Animation" id="Animation_gvxed"]
@@ -629,11 +651,16 @@ _data = {
 "walk_right": SubResource("Animation_62i7p")
 }
 
-[node name="BusinessGoblin" type="CharacterBody2D"]
+[node name="ShulkerRobot" type="CharacterBody2D"]
 y_sort_enabled = true
-position = Vector2(2, -7)
-script = ExtResource("1_ciccd")
+collision_layer = 4
+collision_mask = 11
+script = ExtResource("1_du7ff")
 acceleration = 100.0
+
+[node name="AnimationDirector" type="Node2D" parent="." node_paths=PackedStringArray("animation_player")]
+script = ExtResource("4_q5sk8")
+animation_player = NodePath("../AnimationPlayer")
 
 [node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("state")]
 script = ExtResource("4_alqsg")
@@ -651,11 +678,15 @@ actor = NodePath("../..")
 animator = NodePath("../../AnimatedSprite2D")
 vision_cast = NodePath("../../RayCast2D")
 
-[node name="EnemyShootState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor", "animator", "vision_cast")]
+[node name="EnemyFlameThrowerState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor", "animator", "vision_cast")]
 script = ExtResource("7_uqm5j")
 actor = NodePath("../..")
 animator = NodePath("../../AnimatedSprite2D")
 vision_cast = NodePath("../../RayCast2D")
+
+[node name="ShootTimer" type="Timer" parent="FiniteStateMachine/EnemyFlameThrowerState"]
+wait_time = 0.8
+one_shot = true
 
 [node name="EnemyChaseState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor", "animator", "vision_cast")]
 script = ExtResource("6_7jra8")
@@ -668,6 +699,7 @@ position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_tt0s6")
 animation = &"move"
 frame = 7
+offset = Vector2(-3.63, 2.08165e-12)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-4, -3)
@@ -678,12 +710,9 @@ libraries = {
 "": SubResource("AnimationLibrary_bui6d")
 }
 
-[node name="AnimationDirector" type="Node2D" parent="." node_paths=PackedStringArray("animation_player")]
-position = Vector2(-2.2, -2.2)
-script = ExtResource("4_q5sk8")
-animation_player = NodePath("../AnimationPlayer")
-
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(-4, -3)
 target_position = Vector2(2.08165e-12, 16)
 collision_mask = 3
+
+[connection signal="timeout" from="FiniteStateMachine/EnemyFlameThrowerState/ShootTimer" to="FiniteStateMachine/EnemyFlameThrowerState" method="_on_shoot_timer_timeout"]

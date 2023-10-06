@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cae72cvsbwumh"]
 
 [ext_resource type="Texture2D" uid="uid://4f53opkqns45" path="res://Assets/grass_bass.png" id="1_njj2l"]
-[ext_resource type="PackedScene" uid="uid://0swq8evanvan" path="res://Scenes/business_goblin.tscn" id="2_5tql4"]
-[ext_resource type="PackedScene" uid="uid://teqnx05sgtp0" path="res://player.tscn" id="2_f52tv"]
+[ext_resource type="PackedScene" uid="uid://0swq8evanvan" path="res://Scenes/shulker_robot.tscn" id="2_5tql4"]
+[ext_resource type="PackedScene" uid="uid://teqnx05sgtp0" path="res://Scenes/player.tscn" id="2_f52tv"]
 [ext_resource type="PackedScene" uid="uid://blp23h3gehyqm" path="res://Scenes/block_tile_map.tscn" id="3_riu2l"]
 
 [node name="World" type="Node2D"]
@@ -17,61 +17,11 @@ stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("2_f52tv")]
 position = Vector2(51, 111)
-collision_layer = 2
 collision_mask = 5
 
-[node name="BusinessGoblin" parent="." instance=ExtResource("2_5tql4")]
+[node name="ShulkerRobot" parent="." instance=ExtResource("2_5tql4")]
 y_sort_enabled = false
-position = Vector2(503, 219)
-collision_layer = 4
-collision_mask = 3
-
-[node name="BusinessGoblin2" parent="." instance=ExtResource("2_5tql4")]
-y_sort_enabled = false
-position = Vector2(288, 46)
-collision_layer = 4
-collision_mask = 3
-
-[node name="BusinessGoblin3" parent="." instance=ExtResource("2_5tql4")]
-y_sort_enabled = false
-position = Vector2(248, 265)
-collision_layer = 4
-collision_mask = 3
-
-[node name="BusinessGoblin4" parent="." instance=ExtResource("2_5tql4")]
-y_sort_enabled = false
-position = Vector2(345, 148)
-collision_layer = 4
-collision_mask = 3
-
-[node name="BusinessGoblin5" parent="." instance=ExtResource("2_5tql4")]
-y_sort_enabled = false
-position = Vector2(536, 62)
-collision_layer = 4
-collision_mask = 3
-
-[node name="BusinessGoblin6" parent="." instance=ExtResource("2_5tql4")]
-y_sort_enabled = false
-position = Vector2(190, 157)
-collision_layer = 4
-collision_mask = 3
-
-[node name="BusinessGoblin7" parent="." instance=ExtResource("2_5tql4")]
-y_sort_enabled = false
-position = Vector2(82, 44)
-collision_layer = 4
-collision_mask = 3
-
-[node name="BusinessGoblin8" parent="." instance=ExtResource("2_5tql4")]
-y_sort_enabled = false
-position = Vector2(53, 259)
-collision_layer = 4
-collision_mask = 3
-
-[node name="BusinessGoblin9" parent="." instance=ExtResource("2_5tql4")]
-y_sort_enabled = false
-position = Vector2(581, 166)
-collision_layer = 4
+position = Vector2(197, 188)
 collision_mask = 3
 
 [node name="BlockTileMap" parent="." instance=ExtResource("3_riu2l")]

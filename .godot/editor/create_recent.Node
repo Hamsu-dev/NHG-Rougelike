@@ -1,3 +1,10 @@
+EnemyFlamethrowerState
+Timer
+CollisionShape2D
+Sprite2D
+Area2D
+CharacterBody2D
+Marker2D
 RayCast2D
 Node
 EnemyChaseState
@@ -8,7 +15,4 @@ AnimationPlayer
 Camera2D
 AnimatedSprite2D
 AnimationTree
-CollisionShape2D
-Sprite2D
-CharacterBody2D
 TileMap

@@ -1,4 +1,4 @@
-class_name EnemyFlameThrowerState
+class_name EnemyShootState
 extends State
 
 @export var actor: Enemy

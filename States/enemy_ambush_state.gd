@@ -6,7 +6,7 @@ extends State
 @export var vision_cast: RayCast2D
 
 signal woke_up
-
+var has_woken_up = false # Add this flag
 
 func _ready():
 	set_physics_process(false)
@@ -15,6 +15,7 @@ func _ready():
 func _enter_state() -> void:
 	set_physics_process(true)
 	animator.play("idle")
+	has_woken_up = false
 
 
 func _exit_state() -> void:
@@ -30,3 +31,4 @@ func _physics_process(delta):
 			actor.animation_director.direction = Vector2.LEFT if direction_to_player.x < 0 else Vector2.RIGHT
 			actor.animation_director.play("wake") # "wake" should transition to the correct left or right based on AnimationDirector
 			woke_up.emit()
+			has_woken_up = true

@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696543413
+::res://::1696854928
 icon.svg::CompressedTexture2D::2761195534252306942::1696290625::1696290625::1::::<><>::
-::res://Assets/::1696548513
+::res://Assets/::1696745322
 bullet.png::CompressedTexture2D::6929862045959470011::1696548553::1696548554::1::::<><>::
 business_gobliman.png::CompressedTexture2D::7552917847187904424::1690473671::1696229734::1::::<><>::
 dungeon_block.png::CompressedTexture2D::5948166027296178435::1690473671::1696229744::1::::<><>::
@@ -11,22 +11,62 @@ Hero_Run-sheet.png::CompressedTexture2D::8776959770578513205::1696238252::169623
 killstreak_bullets.png::CompressedTexture2D::3745581947004094538::1696478492::1696478495::1::::<><>::
 Pot_enemy.png::CompressedTexture2D::56993048114365292::1696384322::1696384358::1::::<><>::
 shadow.png::CompressedTexture2D::6828922065097580826::1690473671::1696229755::1::::<><>::
-::res://Scenes/::1696548518
+::res://Assets/Dark Theme/::1696733091
+DARK Top Down.png::CompressedTexture2D::2738090859180912909::1696645665::1696645665::1::::<><>::
+Dark_Theme_ground.png::CompressedTexture2D::2466207871080645710::1696642884::1696642884::1::::<><>::
+Pre-built house 1.png::CompressedTexture2D::4536090017009355116::1696641903::1696642739::1::::<><>::
+test_tileset.png::CompressedTexture2D::46672718502479106::1696643983::1696643983::1::::<><>::
+tileset.png::CompressedTexture2D::5441485691427647025::1696641694::1696642739::1::::<><>::
+::res://Assets/Rooms/::1696745327
+basic_dungeon_room.png::CompressedTexture2D::1967312652681395546::1696745305::1696745327::1::::<><>::
+::res://Assets/The Tiny Alchemist - Guns/::1696847664
+Bunny Hero Revised Colours 1.1.png::CompressedTexture2D::5608775194236668075::1696733240::1696733243::1::::<><>::
+gun1.png::CompressedTexture2D::8705578302426819866::1696577441::1696577441::1::::<><>::
+gun2.png::CompressedTexture2D::614933716347016774::1696577441::1696577441::1::::<><>::
+gun3.png::CompressedTexture2D::3178188985942936453::1696577441::1696577441::1::::<><>::
+gun4.png::CompressedTexture2D::269566648558119965::1696577441::1696577441::1::::<><>::
+gun5.png::CompressedTexture2D::8952256986941235298::1696577441::1696577441::1::::<><>::
+gun6.png::CompressedTexture2D::2966991760657214582::1696577441::1696577441::1::::<><>::
+gun7.png::CompressedTexture2D::1488226463811294121::1696577441::1696577441::1::::<><>::
+gun8.png::CompressedTexture2D::4485897086269494521::1696577441::1696577441::1::::<><>::
+gun9.png::CompressedTexture2D::6785677674221655524::1696577441::1696577441::1::::<><>::
+gun10.png::CompressedTexture2D::5140847273256995985::1696577441::1696577441::1::::<><>::
+gun11.png::CompressedTexture2D::7925162131927873397::1696577441::1696577441::1::::<><>::
+gun12.png::CompressedTexture2D::2632446232584423562::1696577441::1696577441::1::::<><>::
+gun13.png::CompressedTexture2D::3569913279527786487::1696577441::1696577441::1::::<><>::
+gun14.png::CompressedTexture2D::4860867966975082853::1696577441::1696577441::1::::<><>::
+gun15.png::CompressedTexture2D::2965299676251494595::1696577441::1696577441::1::::<><>::
+gun16.png::CompressedTexture2D::5139866611189710480::1696577441::1696577441::1::::<><>::
+gun17.png::CompressedTexture2D::330341801026387229::1696577441::1696577441::1::::<><>::
+gun18.png::CompressedTexture2D::4631044547438639555::1696577441::1696577441::1::::<><>::
+gun19.png::CompressedTexture2D::8923064499937492445::1696577441::1696577441::1::::<><>::
+gun20.png::CompressedTexture2D::2558305149275490536::1696577441::1696577441::1::::<><>::
+::res://Enemies/::1696642468
+::res://Enemies/ShulkerRobot/::1696824632
+DARK Top Down.png::CompressedTexture2D::788106139623926892::1696642611::1696642603::1::::<><>::
+shulker_robot.gd::GDScript::-1::1696566876::0::1::::Enemy<>CharacterBody2D<>::
+shulker_robot.tscn::PackedScene::1793245977471677673::1696824632::0::1::::<><>::res://Enemies/ShulkerRobot/shulker_robot.gd<>res://Scripts/animation_director.gd<>res://States/finite_state_machine.gd<>res://States/enemy_wander_state.gd<>res://States/enemy_ambush_state.gd<>res://States/enemy_shoot_state.gd<>res://States/enemy_chase_state.gd<>uid://2uwxiw31gd5
+::res://Scenes/::1696852452
+base_gun.tscn::PackedScene::2721496419939929543::1696852452::0::1::::<><>::uid://bljskql27dg26::::res://Assets/The Tiny Alchemist - Guns/gun3.png
 block_tile_map.tscn::PackedScene::3191153402252621508::1696471818::0::1::::<><>::uid://cq0lop2fu0fpj
-bullet.tscn::PackedScene::4996382562459429973::1696548518::0::1::::<><>::res://Scripts/Bullet.gd<>uid://c5y42yvynceed::::res://Assets/bullet.png
-player.tscn::PackedScene::1342841475388420275::1696548518::0::1::::<><>::res://Scripts/Player.gd<>uid://c6a1r3nwu4qex::::res://Assets/Hero-sheet.png<>uid://dxbvillcw28wn::::res://Assets/Hero_Run-sheet.png
-flame_bullet.tscn::PackedScene::800683200540132844::1696548518::0::1::::<><>::res://Scripts/Flame_bullet.gd<>uid://cmwqul40xlnn0::::res://Assets/Flame_bullet.png
-shulker_robot.tscn::PackedScene::1793245977471677673::1696548518::0::1::::<><>::res://Scripts/shulker_robot.gd<>uid://2uwxiw31gd5::::res://Assets/Pot_enemy.png<>res://States/finite_state_machine.gd<>res://Scripts/animation_director.gd<>res://States/enemy_wander_state.gd<>res://States/enemy_chase_state.gd<>res://States/enemy_ambush_state.gd<>res://States/enemy_shoot_state.gd
-world.tscn::PackedScene::4783090176914055471::1696548518::0::1::::<><>::uid://4f53opkqns45::::res://Assets/grass_bass.png<>uid://0swq8evanvan::::res://Scenes/shulker_robot.tscn<>uid://teqnx05sgtp0::::res://Scenes/player.tscn<>uid://blp23h3gehyqm::::res://Scenes/block_tile_map.tscn
-::res://Scripts/::1696548418
+bullet.tscn::PackedScene::4996382562459429973::1696824632::0::1::::<><>::res://Scripts/Bullet.gd<>uid://c5y42yvynceed
+dungeon_room.tscn::PackedScene::3973011094136034530::1696852452::0::1::::<><>::res://Scripts/DungeonRoom.gd<>uid://3a8l74rcqeri::::res://Assets/Rooms/basic_dungeon_room.png
+GunManager.gd::GDScript::-1::1696827191::0::1::::<>Node2D<>::
+player.tscn::PackedScene::1342841475388420275::1696852452::0::1::::<><>::res://Scripts/Player.gd<>uid://cl56ycpdtjsy2::::res://Assets/The Tiny Alchemist - Guns/Bunny Hero Revised Colours 1.1.png<>res://Scripts/GunManager.gd<>uid://be1kwbtsck5kl::::res://Scenes/base_gun.tscn
+world.tscn::PackedScene::4783090176914055471::1696852452::0::1::::<><>::uid://teqnx05sgtp0::::res://Scenes/player.tscn<>res://Scripts/Camera2D.gd<>uid://bwus6atk33so5::::res://Scenes/dungeon_room.tscn
+::res://Scripts/::1696852452
 animation_director.gd::GDScript::-1::1696469851::0::1::::AnimationDirector<>Node2D<>res://Scripts/animation_director.svg::
-Bullet.gd::GDScript::-1::1696548418::0::1::::<>CharacterBody2D<>::
-Player.gd::GDScript::-1::1696400643::0::1::::Player<>CharacterBody2D<>::
-shulker_robot.gd::GDScript::-1::1696546256::0::1::::Enemy<>CharacterBody2D<>::
+Bullet.gd::GDScript::-1::1696556872::0::1::::<>CharacterBody2D<>::
+Camera2D.gd::GDScript::-1::1696746458::0::1::::<>Camera2D<>::
+DungeonRoom.gd::GDScript::-1::1696746136::0::1::::<>Node2D<>::
+events.gd::GDScript::-1::1696746458::0::1::::<>Node<>::
+GunManager.gd::GDScript::-1::1696838051::0::1::::<>Node<>::
+Player.gd::GDScript::-1::1696852452::0::1::::<>CharacterBody2D<>::
 state.gd::GDScript::-1::1690473671::0::1::::State<>Node<>::
-::res://States/::1696548374
+::res://States/::1696557044
 enemy_ambush_state.gd::GDScript::-1::1696471724::0::1::::EnemyAmbushState<>State<>::
 enemy_chase_state.gd::GDScript::-1::1696400493::0::1::::EnemyChaseState<>State<>::
-enemy_shoot_state.gd::GDScript::-1::1696548374::0::1::::EnemyShootState<>State<>::
+enemy_flame_thrower_state.gd::GDScript::-1::1696556901::0::1::::EnemyShootState<>State<>::
+enemy_shoot_state.gd::GDScript::-1::1696557044::0::1::::EnemyFlameThrowerState<>State<>::
 enemy_wander_state.gd::GDScript::-1::1696400493::0::1::::EnemyWanderState<>State<>::
 finite_state_machine.gd::GDScript::-1::1696400493::0::1::::FiniteStateMachine<>Node<>::

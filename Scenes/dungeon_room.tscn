@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwus6atk33so5"]
+
+[ext_resource type="Script" path="res://Scripts/DungeonRoom.gd" id="1_jvl1b"]
+[ext_resource type="Texture2D" uid="uid://3a8l74rcqeri" path="res://Assets/Rooms/basic_dungeon_room.png" id="2_7yb40"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwkcj"]
+size = Vector2(222, 109)
+
+[node name="DungeonRoom" type="Node2D"]
+script = ExtResource("1_jvl1b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(161, 88)
+texture = ExtResource("2_7yb40")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(162, 269)
+texture = ExtResource("2_7yb40")
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2(252, 35)
+scale = Vector2(11.2101, 6.87365)
+polygon = PackedVector2Array(-7.22561, -5.09191, -7.22561, -0.290967, 1.87331, -0.290967, 1.87331, 6.40126, 6.15515, 6.25578, 6.15515, -5.09191)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2(100, 36)
+scale = Vector2(11.2101, 6.87365)
+polygon = PackedVector2Array(4.54946, -0.43645, 4.54946, -5.09191, -8.83131, -5.09191, -8.92051, 6.11029, -4.54946, 6.25578, -4.46026, -0.581933)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2(100, 134)
+scale = Vector2(11.2101, 6.87365)
+polygon = PackedVector2Array(4.63867, 1.45483, 4.63867, 6.69223, -8.83131, 6.69223, -8.83131, -5.2374, -4.46026, -5.2374, -4.46026, 1.30935)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2(269, 129)
+scale = Vector2(11.2101, 6.87365)
+polygon = PackedVector2Array(4.63867, 7.41964, 4.63867, -4.65547, 0.356821, -4.50998, 0.356821, 2.03676, -8.83131, 2.03676, -8.7421, 7.27416)
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+position = Vector2(161, 87.5)
+shape = SubResource("RectangleShape2D_vwkcj")
+debug_color = Color(0.996078, 0, 0.176471, 0.419608)
+
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]

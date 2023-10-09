@@ -1,10 +1,4 @@
-res://Scenes/shulker_robot.tscn
-res://States/enemy_shoot_state.gd
 res://Scenes/world.tscn
-res://Scenes/bullet.tscn
-res://Scripts/shulker_robot.gd
 res://Scenes/player.tscn
-res://States/enemy_flamethrower_state.gd
-res://Scripts/Flame_bullet.gd
-res://Scenes/flame_bullet.tscn
-res://Scripts/Bullet.gd
+res://Scenes/base_gun.tscn
+res://Scenes/dungeon_room.tscn
